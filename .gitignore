@@ -1,2 +1,3 @@
 harbor-offline-installer-*.tgz
 harbor.*.tar.gz
+server/harbor/input/
