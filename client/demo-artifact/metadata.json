@@ -1,0 +1,6 @@
+{
+  "name": "demo-artifact",
+  "version": "1.0.0",
+  "build_time": "2024-01-01T00:00:00Z",
+  "description": "Sample multi-file artifact pushed to Harbor via ORAS."
+}

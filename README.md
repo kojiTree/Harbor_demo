@@ -70,17 +70,29 @@ cd server/harbor
 sudo docker compose up -d
 ```
 
-
-## ここまで来たら「Harbor server 単体デモ完成」
+### ここまで来たら「Harbor server 単体デモ完成」
 
 * UI が開く（wsl環境の場合、windoesホスト側で、http://localhost）
 * Project 作れる
 * 「ここが OCI Registry」と説明できる
 
-### harbor-db
+#### harbor-db
 内容確認
 ```sh
 docker exec -it harbor-db bash
 psql -U postgres -d registry
 \d artifact
 ```
+
+## clientデモ(ORAS)
+
+同一マシンで行う場合、
+
+```sh
+sudo sh -c 'echo "127.0.0.1 harbor.local" >> /etc/hosts'
+curl -v http://harbor.local/v2/        # 確認
+```
+
+[client/README.md](client/README.md)
+
+
