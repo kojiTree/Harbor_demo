@@ -63,9 +63,24 @@ sudo ./install.sh
 docker ps
 ```
 
+#### 以降再起動時
+止まっていたら「起動」する
+```bash
+cd server/harbor
+sudo docker compose up -d
+```
+
+
 ## ここまで来たら「Harbor server 単体デモ完成」
 
-* UI が開く
+* UI が開く（wsl環境の場合、windoesホスト側で、http://localhost）
 * Project 作れる
 * 「ここが OCI Registry」と説明できる
 
+### harbor-db
+内容確認
+```sh
+docker exec -it harbor-db bash
+psql -U postgres -d registry
+\d artifact
+```
